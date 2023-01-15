@@ -18,7 +18,7 @@ const mongoose = require('mongoose');
 
 const showSchema = new mongoose.Schema({
   title: {type: String, required: true},
-  lastWatched: {type: Date, required: true},
+  lastWatched: Date,
   currentlyWatching: Boolean,
   seriesComplete: Boolean,
   seriesUpToDate: Boolean,
@@ -30,6 +30,6 @@ const showSchema = new mongoose.Schema({
   notes: String
 });
 
-const Show = mongoose.Model('Show', showSchema);
+const Show = mongoose.model('Show', showSchema);
 
 module.exports = Show;
