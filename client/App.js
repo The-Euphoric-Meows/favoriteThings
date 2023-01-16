@@ -1,5 +1,5 @@
 import React from "react";
-import ShowContainer from "./components/showContainer";
+import ShowContainer from "./components/ShowContainer";
 
 function App() {
   return (
