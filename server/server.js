@@ -5,12 +5,17 @@ const app = express();
 const PORT = 1963;
 const showRouter = require('./routes/showRouter');
 const connectDB = require('./schemas/db');
+const cors = require('cors')
+
 
 connectDB()
 
+app.use(express.json())
+//urlencoded includes formData
 app.use(express.urlencoded({extended:false}));
+app.use(cors())
 
-app.use('/shows', showRouter);
+app.use('/api/shows', showRouter);
 
 app.get('/', (req, res) => {
   res.send('hello nurse')
