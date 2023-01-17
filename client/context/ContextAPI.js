@@ -12,7 +12,7 @@ function ContextAPIProvider(props){
     fetch('http://localhost:1963/api/shows')
       .then(response => response.json())
       .then(data => setShows(data))
-    }, [])
+    }, [shows])
 
   const state = {
     shows,

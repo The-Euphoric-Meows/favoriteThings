@@ -10,6 +10,8 @@ const cors = require('cors')
 
 connectDB()
 
+app.use(express.json())
+//urlencoded includes formData
 app.use(express.urlencoded({extended:false}));
 app.use(cors())
 

@@ -13,6 +13,7 @@ function ShowContainer (){
         <ShowCard 
           key={show._id}
           title={show.title}
+          id={show._id}
         />
       )
     })}
